@@ -1,37 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-:root {
-    height: 100%;
-    
-    --color-light: #f8f8f8;
-    --color-dark: #E5E0D8;
-    --color-grey: #9c9893;
-    --color-accent: #d1a980;
-
-    --padding-sidebar: max(10%, 100px);
-    --height-header: calc(var(--font-size-title) * 2 + 1rem);
-
-    --font-size-title: 3.5rem;
-    --font-size-sidebar-section: 1.7rem;
-}
-
-body {
-    font-family: "Poppins";
-    font-weight: 300;
-
-    height: 100%;
-
-    margin: 0;
-    border: 0;
-    padding: 0;
-
-    background-color: var(--color-light);
-
-    display: flex;
-}
-/* 
-    SIDEBAR
-*/
 #sidebar {
     background-color: var(--color-dark);
     padding: var(--height-header) var(--font-size-title) 0 var(--padding-sidebar);
@@ -127,28 +93,4 @@ body {
     &:hover {
         background-color: var(--color-light);
     }
-}
-
-/* 
-    CONTENT
-*/
-#content {
-    padding: 0 0 0 var(--font-size-title);
-}
-
-.title {
-    font-size: var(--font-size-title);
-    font-weight: 600;
-    line-height: var(--font-size-title);
-
-    margin: var(--font-size-title) 0 1rem;
-}
-
-.view-info {
-    font-size: 1rem;
-    font-weight: 500;
-}
-.counter {
-    font-size: 0.8rem;
-    margin: 0.5rem 0 0;
 }

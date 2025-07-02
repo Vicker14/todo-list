@@ -1,0 +1,23 @@
+@import url('./variables.css');
+
+#content {
+    padding: 0 0 0 var(--font-size-title);
+}
+
+.title {
+    font-size: var(--font-size-title);
+    font-weight: 600;
+    line-height: var(--font-size-title);
+
+    margin: var(--font-size-title) 0 var(--margin-bottom-title);
+}
+
+.view-info {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.counter {
+    font-size: 0.8rem;
+    margin: 0.5rem 0 0;
+    color: var(--color-light);
+}

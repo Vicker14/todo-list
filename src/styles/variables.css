@@ -1,0 +1,15 @@
+:root {
+    height: 100%;
+    
+    --color-light: #f8f8f8;
+    --color-dark: #E5E0D8;
+    --color-grey: #9c9893;
+    --color-accent: #d1a980;
+
+    --padding-sidebar: max(10%, 100px);
+    --margin-bottom-title: 2rem;
+    --height-header: calc(var(--font-size-title) * 2 + var(--margin-bottom-title));
+
+    --font-size-title: 3.5rem;
+    --font-size-sidebar-section: 1.7rem;
+}
