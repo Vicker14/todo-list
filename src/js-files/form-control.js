@@ -1,7 +1,7 @@
 import { ProjectsListManagement} from "./manage-projects";
 
-const submitButton = document.querySelector("#form-submit");
 const divForm = document.querySelector(".newProjectForm");
+const form = document.querySelector(".newProjectForm form");
 
 const addProjectButton = document.querySelector(".add-project");
 
@@ -9,13 +9,13 @@ addProjectButton.addEventListener("click", () => {
     divForm.classList.toggle("hidden");
 })
 
-submitButton.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const newProjectName = document.getElementById("projectName").value;
-    const input = document.getElementById("projectName");
-    input.textContent = "";
-
-    ProjectsListManagement.addProject(newProjectName);
-    divForm.classList.toggle("hidden");
+    const newProjectName = form.projectName.value.trim();
+    if (newProjectName.length >= 1) {
+        ProjectsListManagement.addProject(newProjectName);
+    };
+    divForm.classList.add("hidden");
+    form.reset();
 });
