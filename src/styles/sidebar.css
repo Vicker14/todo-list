@@ -2,6 +2,10 @@
     background-color: var(--color-dark);
     padding: var(--height-header) var(--font-size-title) 0 var(--padding-sidebar);
 
+    width: var(--width-sidebar);
+    height: 100%;
+    position: fixed;
+
     & > * {
         padding-bottom: calc(var(--font-size-sidebar-section) /2);
     }
