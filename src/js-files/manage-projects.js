@@ -13,6 +13,11 @@ export class ProjectsListManagement {
             ProjectsListDisplay.displayProjects(name);
         }
     }
+
+    static removeProject(name) {
+        const index = this.projectsList.indexOf(name);
+        this.projectsList.splice(index, 1);
+    }
 }
 
 class ProjectsListDisplay {
@@ -34,7 +39,11 @@ class ProjectsListDisplay {
     
         projectRemove.setAttribute("class", "project-delete");
         projectRemove.textContent = "-";
-
+        projectRemove.addEventListener("click", () => {
+            
+            ProjectsListManagement.removeProject(name);
+            this.projectsContainer.removeChild(newProject);
+        });
 
         newProject.append(projectName, projectRemove);
 
