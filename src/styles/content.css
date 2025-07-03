@@ -25,7 +25,7 @@
 
 #card-container {    
     display: grid;
-    grid-template: repeat(auto-fit, minmax(20rem, 1fr)) / repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template: repeat(auto-fill, minmax(20rem, 1fr)) / repeat(auto-fill, minmax(20rem, 1fr));
     gap: var(--font-size-title);
 }
 
