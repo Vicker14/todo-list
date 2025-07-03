@@ -10,7 +10,7 @@
         <form>
             <button class="close-form">✕</button>
             <label for="new-project-name">Project name:</label>
-            <input type="text" name="new-project-name" id="projectName" maxlength="12" required>
+            <input type="text" name="new-project-name" id="projectName" maxlength="12">
             <button type="submit" id="form-submit">Done!</button>
         </form>
     </div>
@@ -40,7 +40,31 @@
             <div class="counter">5 todos left</div>
         </div>
 
-        <div class="card-container">
+        <div id="card-container">
+
+            <div class="card">
+                <div class="card-top">
+                    <svg class="circle">
+                        <circle class="grey"/>
+                    </svg>
+                    <div class="todo-title">Play games</div>
+                    <div class="todo-description">Have fun with friends playing games</div>
+                </div>
+                <div class="card-bottom">
+                    <div class="card-info">
+                        <div class="todo-project">Games</div>
+                        <div class="todo-date">12 / 7 / 2025</div>
+                    </div>
+                    <button class="todo-remove">remove <img src="img/remove.png" alt="bin"></button>
+                </div>
+            </div>
+
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+            <div class="card">6</div>
+            <div class="card">7</div>
 
         </div>
     </div>
