@@ -1,0 +1,101 @@
+.card {
+    --card-width: max(20rem, 100%);
+
+    height: 15rem;
+    width: var(--card-width);
+
+    margin: 2rem 0 0 0;
+    border-radius: 1rem 7rem 1rem 1rem;    
+    background-color: var(--color-dark);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    box-shadow: rgb(0, 0, 0, 0.05) 0.6rem 0.6rem 1rem;
+
+    & .todo-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+
+        margin: 1.5rem 0 0 1.5rem;
+    }
+
+    & .todo-description {
+        font-size: 1.2rem;
+        font-weight: 400;
+
+        margin: 0 6rem 0 2rem;
+    }
+
+    & .card-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    & .card-info {
+        margin: 0 0 0.7rem 0.7rem;
+        font-size: 1rem;
+    }
+    & .todo-project {
+        font-weight: 600;
+    }
+    & .todo-remove {
+        --remove-height: 2em;
+
+        height: var(--remove-height);
+        padding: 0 1em;
+        margin: 0 2rem 0 0;
+
+        border-radius: calc(var(--remove-height) / 2);
+        border: none;
+
+        background-color: var(--color-accent);
+        box-shadow: rgb(165, 136, 105) 0.25em 0.3em 0px;
+
+        display: flex;
+        align-items: center;
+
+        gap: 1em;
+        
+        &:hover {
+            background-color: var(--color-light);
+            cursor: pointer;
+        }
+        & img {
+            height: calc(var(--remove-height) / 1.5);
+        }
+    }
+}
+
+.circle {
+    position: absolute;
+    left: calc(var(--card-width) - 5rem);
+
+    --size: 6rem;
+    --size-radius: calc(var(--size)/2);
+
+    width: var(--size);
+    height: var(--size);
+    object-view-box: 0 0 var(--size) var(--size);
+
+    & circle {
+        cx: var(--size-radius);
+        cy: var(--size-radius);
+        r: var(--size-radius);
+    }
+}
+.circle .grey{
+    fill: var(--color-grey);
+}
+.circle .red{
+    fill: var(--color-red);
+}
+.circle .yellow{
+    fill: var(--color-yellow);
+}
+.circle .green{
+    fill: var(--color-green);
+}
