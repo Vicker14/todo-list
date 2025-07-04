@@ -1,3 +1,5 @@
+import { TaskListManagement } from "./manage-task";
+
 export class TodoTask {
     constructor(title, description, project, dueDate, priority) {
         this.title = title;
@@ -5,6 +7,10 @@ export class TodoTask {
         this.project = project;
         this.dueDate = dueDate;
         this.priority = priority;
+
+        this.code = Math.random();
+        while (TaskListManagement.tasksList.includes(this.code))
+            this.code = Math.random();
     }
 
     get getTitle() {
@@ -21,5 +27,12 @@ export class TodoTask {
     }
     get getPriority() {
         return this.priority;
+    }
+    get getCode() {
+        return this.code;
+    }
+
+    set setPriority(value) {
+        this.priority = value;
     }
 }

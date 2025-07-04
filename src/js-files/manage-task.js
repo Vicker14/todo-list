@@ -1,6 +1,18 @@
-import "./task-creation";
+import { TodoTask } from "./task-creation";
 
-// Manage list of tasks
+export class TaskListManagement {
+    static tasksList = [];
 
-    // Create list add
-    // Create list remove
+    static get getTasksList() {
+        return this.tasksList;
+    }
+
+    static addTask(task) {
+        this.tasksList.push(task);
+    }
+    static removeTask(task) {
+        this.tasksList.splice(this.tasksList.indexOf(task), 1);
+    }
+}
+
+class TaskListDisplay {};
