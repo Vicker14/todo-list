@@ -6,14 +6,50 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="newProjectForm hidden">
+    <div class="newProjectForm form hidden">
         <form>
             <button class="close-form">✕</button>
             <label for="new-project-name">Project name:</label>
             <input type="text" name="new-project-name" id="projectName" maxlength="12">
-            <button type="submit" id="form-submit">Done!</button>
+            <button type="submit" id="project-form-submit">Done!</button>
         </form>
     </div>
+
+    <div class="newTodoForm form hidden">
+        <form>
+            <button class="close-form">✕</button>
+
+            <label>Project name:</label>
+            <input type="text" name="title" id="todoName" maxlength="24">
+
+            <label>Description:</label>
+            <input type="text" name="description" id="todoDescription" maxlength="48">
+
+            <label>Project:</label>
+            <select name="project-selection" id="project-selection"></select>
+
+            <div class="priority-selection">
+                <label>
+                    <input type="radio" name="opcion" value="1">
+                    High
+                </label>
+                <label>
+                    <input type="radio" name="opcion" value="2">
+                    Medium
+                </label>
+                <label>
+                    <input type="radio" name="opcion" value="3">
+                    Low
+                </label>
+            </div>
+
+            <label>Date:</label>
+            <input type="date">
+
+            <button type="submit" id="todo-form-submit">Done!</button>
+        </form>
+    </div>
+
     <div id="sidebar">
         <div class="sidebar-home">
             <img src="img/home.svg" alt="home-ico">
