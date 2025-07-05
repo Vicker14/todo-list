@@ -38,7 +38,7 @@ class TaskListDisplay {
 
         const title = document.createElement("div");
         title.classList.add("todo-title");
-        title.textContent = task.getTitle;
+        title.textContent = task.getTitle.charAt(0).toUpperCase() + task.getTitle.slice(1);
 
         const description = document.createElement("div");
         description.classList.add("todo-description");
