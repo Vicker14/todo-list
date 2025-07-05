@@ -14,6 +14,7 @@ export class TaskListManagement {
     }
     static removeTask(task) {
         this.tasksList.splice(this.tasksList.indexOf(task), 1);
+        setLocalStorage();
     }
 }
 
@@ -66,6 +67,10 @@ export class TaskListDisplay {
         const removeButton = document.createElement("button");
         removeButton.classList.add("todo-remove");
         removeButton.textContent = "remove";
+        removeButton.addEventListener("click", () => {
+            TaskListManagement.removeTask(task);
+            this.tasksContainer.removeChild(newCard);
+        })
 
         cardBottom.append(cardInfo, removeButton);
 
