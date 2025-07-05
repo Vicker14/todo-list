@@ -1,6 +1,8 @@
+import { getProjectsLocalStorage, setProjectsLocalStorage } from "./local-storage-handling";
+
 export class ProjectsListManagement {
 
-    static projectsList = ["-"];
+    static projectsList = getProjectsLocalStorage() === null ? ["-"] : getProjectsLocalStorage();
 
     static getProjectsList() {
         return this.projectsList;
@@ -12,15 +14,17 @@ export class ProjectsListManagement {
             this.projectsList.push(name);
             ProjectsListDisplay.displayProjects(name);
         }
+        setProjectsLocalStorage();
     }
 
     static removeProject(name) {
         const index = this.projectsList.indexOf(name);
         this.projectsList.splice(index, 1);
+        setProjectsLocalStorage();
     }
 }
 
-class ProjectsListDisplay {
+export class ProjectsListDisplay {
     
     static projectsContainer = document.querySelector(".projects-container");
 
