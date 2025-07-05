@@ -1,7 +1,8 @@
-import { getLocalStorage, setLocalStorage } from "./local-storage-handling";
+import { getTasksLocalStorage, setTasksLocalStorage } from "./local-storage-handling";
 
 export class TaskListManagement {
-    static tasksList = getLocalStorage() === null ? [] : getLocalStorage();
+    
+    static tasksList = getTasksLocalStorage() === null ? [] : getTasksLocalStorage();
 
     static get getTasksList() {
         return this.tasksList;
@@ -10,12 +11,12 @@ export class TaskListManagement {
     static addTask(task) {
         this.tasksList.push(task);
         TaskListDisplay.displayTask(task);
-        setLocalStorage();
+        setTasksLocalStorage();
     }
     static removeTask(task) {
         this.tasksList.splice(this.tasksList.indexOf(task), 1);
         TaskListDisplay.updateCounter();
-        setLocalStorage();
+        setTasksLocalStorage();
     }
 }
 
