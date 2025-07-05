@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "webpack serve",
-    "deploy": "npx webpack && git subtree push --prefix dist origin deployment"
+    "build": "webpack --mode production",
+    "deploy": "npm run build && git add -A && git commit -m \"build(dist): actualiza archivos\" --no-verify && git subtree push --prefix dist origin deployment"
   },
   "repository": {
     "type": "git",
