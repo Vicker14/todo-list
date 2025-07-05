@@ -90,12 +90,12 @@
 .circle .grey{
     fill: var(--color-grey);
 }
-.circle .red{
+.circle .high{
     fill: var(--color-red);
 }
-.circle .yellow{
+.circle .mid{
     fill: var(--color-yellow);
 }
-.circle .green{
+.circle .low{
     fill: var(--color-green);
 }

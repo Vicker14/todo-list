@@ -23,7 +23,11 @@ export class TodoTask {
         return this.project;
     }
     get getDate() {
-        return this.dueDate;
+        const dateArray = this.dueDate.split("-");
+
+        const dateString = `${dateArray[2]} / ${dateArray[1]} / ${dateArray[0]}`
+
+        return dateString;
     }
     get getPriority() {
         return this.priority;
