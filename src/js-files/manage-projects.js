@@ -1,6 +1,6 @@
 export class ProjectsListManagement {
 
-    static projectsList = [];
+    static projectsList = ["-"];
 
     static getProjectsList() {
         return this.projectsList;
