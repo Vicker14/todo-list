@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="newProjectForm form hidden">
+        <form>
+            <button class="close-form">✕</button>
+            <label for="new-project-name">Project name:</label>
+            <input type="text" name="new-project-name" id="projectName" maxlength="12">
+            <button type="submit" id="project-form-submit">Done!</button>
+        </form>
+    </div>
+
+    <div class="newTodoForm form hidden">
+        <form>
+            <button class="close-form">✕</button>
+
+            <label>Task name:</label>
+            <input type="text" name="title" id="todoName" maxlength="24" required>
+
+            <label>Description:</label>
+            <input type="text" name="description" id="todoDescription" maxlength="48">
+
+            <label>Project:</label>
+            <select name="project-selection" id="projectSelection"></select>
+
+            <div class="priority-selection">
+                <label>
+                    <input type="radio" name="opcion" value="1">
+                    High
+                </label>
+                <label>
+                    <input type="radio" name="opcion" value="2">
+                    Medium
+                </label>
+                <label>
+                    <input type="radio" name="opcion" value="3">
+                    Low
+                </label>
+            </div>
+
+            <label>Date:</label>
+            <input type="date" id="todoDate" required>
+
+            <button type="submit" id="todo-form-submit">Done!</button>
+        </form>
+    </div>
+
+    <div id="sidebar">
+        <div class="sidebar-home">
+            <img src="b9042010868b5d601e6d.svg" alt="home-ico">
+            <div class="selected">HOME</div>
+        </div>
+        <div class="sidebar-projects">
+            <div class="projects-title">
+                <img src="28bce7f7ef39672fbb45.svg" alt="projects-ico">
+                PROJECTS
+                <button class="add-project">+</button>
+            </div>
+            
+            <div class="projects-container">
+                <!-- Filled with JS -->
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="title">Todo List</div>
+
+        <div class="subtitle">
+            <div class="view-info">
+                <div class="route">Home > All</div>
+                <div class="counter">0 todos left</div>
+            </div>
+            <button class="add-todo">New task</button>
+        </div>
+
+        <div id="card-container">
+
+            <!-- <div class="card">
+                <div class="card-top">
+                    <svg class="circle">
+                        <circle class="grey"/>
+                    </svg>
+                    <div class="todo-title">Play games</div>
+                    <div class="todo-description">Have fun with friends playing games</div>
+                </div>
+                <div class="card-bottom">
+                    <div class="card-info">
+                        <div class="todo-project">Games</div>
+                        <div class="todo-date">12 / 7 / 2025</div>
+                    </div>
+                    <button class="todo-remove">remove <img src="img/remove.png" alt="bin"></button>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</body>
+</html>
