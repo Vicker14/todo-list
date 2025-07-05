@@ -1,5 +1,3 @@
-import { TaskListManagement } from "./manage-task";
-
 export class TodoTask {
     constructor(title, description, project, dueDate, priority) {
         this.title = title;
