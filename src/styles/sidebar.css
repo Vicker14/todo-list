@@ -58,11 +58,11 @@
         justify-content: space-between;
     }
 }
-.name {
+.selected {
     position: relative;
     z-index: 0;
 }
-.name::after {
+.selected::after {
     content: "";
     position: absolute;
     left: 0;

@@ -14,6 +14,7 @@ export class TaskListManagement {
     }
     static removeTask(task) {
         this.tasksList.splice(this.tasksList.indexOf(task), 1);
+        TaskListDisplay.updateCounter();
         setLocalStorage();
     }
 }
@@ -77,6 +78,13 @@ export class TaskListDisplay {
         newCard.append(cardTop, cardBottom);
 
         this.tasksContainer.append(newCard);
+        TaskListDisplay.updateCounter();
+    }
+
+    static counter = document.querySelector(".counter");
+
+    static updateCounter() {
+        this.counter.textContent = `${TaskListManagement.getTasksList.length} todos left`;
     }
 };
 
