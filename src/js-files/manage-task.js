@@ -1,7 +1,7 @@
-import { TodoTask } from "./task-creation";
+import { getLocalStorage, setLocalStorage } from "./local-storage-handling";
 
 export class TaskListManagement {
-    static tasksList = [];
+    static tasksList = getLocalStorage() === null ? [] : getLocalStorage();
 
     static get getTasksList() {
         return this.tasksList;
@@ -10,13 +10,14 @@ export class TaskListManagement {
     static addTask(task) {
         this.tasksList.push(task);
         TaskListDisplay.displayTask(task);
+        setLocalStorage();
     }
     static removeTask(task) {
         this.tasksList.splice(this.tasksList.indexOf(task), 1);
     }
 }
 
-class TaskListDisplay {
+export class TaskListDisplay {
     static tasksContainer = document.getElementById("card-container");
 
     static displayTask(task) {
@@ -38,11 +39,11 @@ class TaskListDisplay {
 
         const title = document.createElement("div");
         title.classList.add("todo-title");
-        title.textContent = task.getTitle.charAt(0).toUpperCase() + task.getTitle.slice(1);
+        title.textContent = task.title;
 
         const description = document.createElement("div");
         description.classList.add("todo-description");
-        description.textContent = task.getDescription;
+        description.textContent = task.description;
 
         cardTop.append(svg, title, description);
 
@@ -55,10 +56,10 @@ class TaskListDisplay {
         
         const taskProject = document.createElement("div");
         taskProject.classList.add("todo-project");
-        taskProject.textContent = task.getProject;
+        taskProject.textContent = task.project;
         const taskDate = document.createElement("div");
         taskDate.classList.add("todo-date");
-        taskDate.textContent = task.getDate;
+        taskDate.textContent = task.dueDate;
 
         cardInfo.append(taskProject, taskDate);
 

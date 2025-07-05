@@ -7,10 +7,7 @@ export class TodoTask {
         this.project = project;
         this.dueDate = dueDate;
         this.priority = priority;
-
         this.code = Math.random();
-        while (TaskListManagement.tasksList.includes(this.code))
-            this.code = Math.random();
     }
 
     get getTitle() {
