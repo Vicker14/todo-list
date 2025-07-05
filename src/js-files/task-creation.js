@@ -5,7 +5,11 @@ export class TodoTask {
         this.title = title;
         this.description = description;
         this.project = project;
-        this.dueDate = dueDate;
+
+        const dateArray = dueDate.split("-");
+        const dateString = `${dateArray[2]} / ${dateArray[1]} / ${dateArray[0]}`
+        this.dueDate = dateString;
+
         this.priority = priority;
         this.code = Math.random();
     }

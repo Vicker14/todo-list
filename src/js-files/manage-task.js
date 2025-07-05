@@ -76,8 +76,8 @@ export class TaskListDisplay {
 };
 
 function priority(task) {
-    if (task.getPriority == 1) { return "high"}
-    else if (task.getPriority == 2) { return "mid"}
-    else if (task.getPriority == 3) { return "low"}
+    if (task.priority == 1) { return "high"}
+    else if (task.priority == 2) { return "mid"}
+    else if (task.priority == 3) { return "low"}
     else return "grey"
 }
