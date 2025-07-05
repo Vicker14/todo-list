@@ -64,6 +64,7 @@ class TaskListDisplay {
 
         const removeButton = document.createElement("button");
         removeButton.classList.add("todo-remove");
+        removeButton.textContent = "remove";
 
         cardBottom.append(cardInfo, removeButton);
 
